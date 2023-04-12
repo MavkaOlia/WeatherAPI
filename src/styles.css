@@ -1,0 +1,61 @@
+body {
+  font-family: sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+#location-icon {
+  height: 40px;
+  color: #418ef4;
+}
+h3 {
+  font-size: 15px;
+  color: #0671c9ce;
+}
+.search {
+  border-bottom-style: groove;
+  border-radius: 30px;
+  border-color: #418ef4;
+  border-style: solid;
+  width: 120px;
+  text-align: center;
+
+  display: block;
+  position: relative;
+  margin: 20px 1em 0 auto;
+  padding: 5px;
+}
+.row {
+  margin: 30px auto;
+  border-color: #d9edfd;
+  border-style: solid;
+  border-radius: 100px;
+  padding: 15px;
+  text-align: center;
+  min-width: 100px;
+  max-width: 500px;
+}
+.col-12 {
+  color: grey;
+  font-size: 20px;
+  font-weight: lighter;
+}
+.col-5,
+.col-2 {
+  color: #42a5f5;
+  font-size: 25px;
+}
+.row.forecast {
+  border-radius: 10px;
+  margin-left: 5px;
+  padding: 5px;
+  min-width: 60px;
+  max-width: 300px;
+}
+.col-6 {
+  color: rgb(68, 64, 64);
+}
+.col-4 {
+  color: #42a5f5;
+}
