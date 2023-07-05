@@ -66,18 +66,31 @@ currentLocation.addEventListener("click", showCurrentLocation);
 
 search("Kyiv");
 
-/*function fahrTemp(event) {
+function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let tempElement = document.querySelector("#degrees");
-  tempElement.innerHTML = 66;
+  let temperatureElement = document.querySelector("#degrees");
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
 }
-function celTemp(event) {
+
+function displayCelsiusTemperature(event) {
   event.preventDefault();
-  let tempElement = document.querySelector("#degrees");
-  tempElement.innerHTML = 19;
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
-let fahrLetter = document.querySelector("#fahrenheit-link");
-fahrLetter.addEventListener("click", fahrTemp);
-let celLetter = document.querySelector("#celsius-link");
-celLetter.addEventListener("click", celTemp);
-*/
+
+let celsiusTemperature = null;
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
